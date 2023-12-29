@@ -1,0 +1,12 @@
+---
+import {getCollection, getEntry} from "astro:content";
+import Project from "../components/Project.astro";
+
+const projects = await getCollection("projects");
+---
+
+<section class="ProjectList py-10">
+    <div class="">
+        {projects.map((project) => <Project project={project} />)}
+    </div>
+</section>

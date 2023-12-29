@@ -1,0 +1,40 @@
+---
+const { project } = Astro.props;
+import {Image} from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+---
+
+<div>
+    <div class="bg-primary rounded-[18px] py-8 px-2">
+        <Image 
+        src={project.data.image} 
+        alt={project.data.title}
+        class={"h-auto max-w-full"}
+        loading="lazy"
+        decoding="async"
+        />
+    </div>
+    <div class="py-4">
+        <div class="pb-2">
+            <h1 class="text-2xl font-bold pb-4">{project.data.title}</h1>
+            {project.data.tags.map((tag) => (
+                <span class="text-xs font-light mr-2 px-3 py-1.5 rounded-full border-[.5px] border-white">{tag}</span>
+            ))}
+        </div>
+        <div class="">
+            <p class="text-sm py-2">{project.data.description}</p>
+            <div class="flex text-xs text-primary py-2">
+                <button class="flex items-center mr-2 gap-x-1 px-4 py-2 rounded-full border-[.5px] border-primary">
+                    <Icon name="mdi:plus-circle-outline" class="text-xl"/>
+                    <a href={project.data.project_note}>
+                        Read project notes
+                    </a>
+                </button>
+                
+                <!-- conditional rendering -->
+                {project.data.visit_link && <button>Visit website</button>}
+
+            </div>
+        </div>
+    </div>
+</div>

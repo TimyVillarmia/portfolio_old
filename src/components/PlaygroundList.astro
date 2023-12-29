@@ -1,0 +1,11 @@
+---
+import PgCard from "../components/PgCard.astro";
+import playground from "../data/playground.json";
+
+---
+
+<section class="ProjectList py-4">
+    <div class="flex flex-col gap-2">
+        {playground.map((project) => <PgCard project={project} />)}
+    </div>
+</section>
