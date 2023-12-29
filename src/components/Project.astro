@@ -32,7 +32,11 @@ import { Icon } from 'astro-icon/components';
                 </button>
                 
                 <!-- conditional rendering -->
-                {project.data.visit_link && <button>Visit website</button>}
+                {project.data.visit_link && 
+                <button>
+                    <Icon name="mdi:arrow-top-left-thin" class="text-xl"/>
+                    <a href={project.data.visit_link}>Visit website</a>
+                </button>}
 
             </div>
         </div>

@@ -1,6 +1,6 @@
 ---
-import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 import ProjectList from '../components/ProjectList.astro';
 import PlaygroundList from '../components/PlaygroundList.astro';
 import CTA from '../components/CTA.astro';
@@ -8,22 +8,7 @@ import CTA from '../components/CTA.astro';
 
 <Layout title="Timy Villarmia">
 	<main>
-		<section class="Hero container py-10">
-			<div>
-				<h1 class="text-5xl text-center font-bold py-4">Hi, I&rsquo;m Timy.</h1>
-				<p class="text-base text-center">I&rsquo;m a computer science student specializing in Full-Stack development with a keen interest in Artificial Intelligence and Human-Computer Interaction.</p>    
-			</div>
-			<div class="flex py-10 items-center justify-around text-sm">
-				<div class="flex items-center justify-center gap-x-2">
-					<Icon name="mdi:location"/>
-					<p>Cebu City, PH</p>
-				</div>
-				<div class="flex items-center justify-center gap-x-2">
-					<Icon name="mdi:check-circle-outline" class="text-[#34d399]"/>
-					<p>Available for Internship</p>
-				</div>
-			</div>
-		</section>
+		<Hero/>
 		<section class="Projects container py-10">
 			<div>
 				<h1 class="text-3xl font-bold py-2 uppercase">Projects</h1>
