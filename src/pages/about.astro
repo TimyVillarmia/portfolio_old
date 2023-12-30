@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import profile from "../assets/images/profile.png"
+import SpotifyWidget from "../components/SpotifyWidget";
 ---
 
 <style>
@@ -37,7 +38,9 @@ import profile from "../assets/images/profile.png"
                         decoding="async"
                         />
                     </div>
-
+                    <div>
+                        <SpotifyWidget client:load/>
+                    </div>
                 </div>
             </div>
         </div>
