@@ -1,50 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import profile from "../assets/images/profile.png"
+import profiles from "../assets/images/profile.png"
+import profile from "../data/profile.json";
 import SpotifyWidget from "../components/SpotifyWidget";
 ---
 
-<style>
-    p {
-        font-size: 14px;
-        font-weight: normal;
-        margin: 12px 0px;
-    }
-</style>
 
 <Layout title="About">
-    <div class="py-20">
-        <h1 class="text-5xl font-bold text-center">Hey, I'm Timy. Nice to meet you.</h1>
-        <div class="container about-me py-20 space-y-4">
-            <div class="left-column text-pretty py-8 px-4 text-sm font-bold bg-card rounded-[18px] border-[.5px] border-[#404040]">
-                <h1 class="text-3xl mb-4">About me</h1>
-                WHERE I'M FROM
-                <p>Hi there! I'm from Cebu, PH, the first in my family to go to college, raised by my hardworking single mom who worked as a maid. Despite being told to get off the computer growing up, I fell in love with it early on, especially playing video games – earning me the title of the family's 'techie-kid.'</p>
-                WHAT I USED TO DO
-                <p>My tech journey started in a cozy pisonet (like a mini internet cafe). Curiosity led me to play around with computers, and soon I was teaching myself photo and video editing, working on design projects for friends and schools.</p>
-                WHAT I DO NOW
-                <p>Currently in my 3rd year of Computer Science at the Asian College of Technology, my focus lies in Full-Stack Development, with a keen interest in Artificial Intelligence and Game Development. I like exploring and learning different technologies, and enrolling to various courses to improve my skills. I care a lot about using code for positive impact. I'm also a graphics designer for the non-profit organization 'Ngiti.</p>
-                <p>                    When I'm not coding and designing, you'll often find me casually playing TFT and League of Legends or consuming tech contents on YouTube</p>
-            </div>
-            <div class="right-column">
-                <div class="top">
-                    <div>
-                        <Image 
-                        src={profile} 
-                        alt={"Timy"}
-                        class={"h-auto max-w-full"}
-                        loading="lazy"
-                        decoding="async"
-                        />
-                    </div>
-                    <div>
-                        <SpotifyWidget client:load/>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
     </div>
 </Layout>
