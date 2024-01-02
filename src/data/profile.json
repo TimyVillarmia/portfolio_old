@@ -4,7 +4,8 @@
         "skills": [
             "Front-end Development",
             "User Interface Design",
-             "Desktop Application Development"],
+             "Desktop Application Development"
+            ],
 
         "Tools": [
             "React",
@@ -18,6 +19,7 @@
             "Bash", 
             "Figma", 
             "Figma", 
-            "Adobe Photoshop"]
+            "Adobe Photoshop"
+        ]
     }
 ]

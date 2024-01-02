@@ -6,30 +6,17 @@ import PlaygroundList from '../components/PlaygroundList.astro';
 import CTA from '../components/CTA.astro';
 ---
 
+
+<style>
+	
+</style>
+
 <Layout title="Timy Villarmia">
 	<main>
 		<Hero/>
-		<section class="Projects container py-10">
-			<div>
-				<h1 class="text-3xl font-bold py-2 uppercase">Projects</h1>
-				<p class="text-sm">A collection of some of my favorite projects from the past few years.</p>
-			</div>
-			<div>
-				<ProjectList/>
-			</div>
-		</section>
-		<section class="Playground container">
-			<div class="">
-				<h1 class="text-3xl font-bold py-2 uppercase">Playground</h1>
-				<p class="text-sm">A collection of my half-finished projects, random ideas, experiments that are fun, & sometimes just a little bit weird.</p>
-			</div>
-			<div>
-				<PlaygroundList/>
-			</div>
-		</section>
-		<section class="CTA container">
-			<CTA/>		
-		</section>
+		<ProjectList/>
+		<PlaygroundList/>
+		<CTA/>		
 	</main>
 </Layout>
 

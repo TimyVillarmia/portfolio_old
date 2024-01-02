@@ -7,11 +7,13 @@ import Nav from '../components/Nav.astro';
 import { ViewTransitions } from 'astro:transitions';
 const { title } = Astro.props;
 import Footer from '../components/Footer.astro';
-
+import MobileNav from '../components/Mobile-Nav.astro';
 ---
 
+
+
 <!doctype html>
-<html lang="en" class=" bg-dark text-white font-serif">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -21,17 +23,12 @@ import Footer from '../components/Footer.astro';
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="container mx-auto">
-		<Nav />
+	<body class="container mx-auto bg-dark font-serif text-white">
+		<header>
+			<Nav />
+		</header>
 		<slot />
 		<Footer />
-		<div class="fixed flex text-sm bottom-0 gap-x-2 w-full h-24 left-0 justify-center items-center md:hidden">
-            <button class="border-[1px] bg-dark bg-opacity-70 rounded-[18px] py-2 px-4 ">
-                <a href="/">Home</a>
-            </button>
-            <button class="border-[1px] bg-dark bg-opacity-70 rounded-[18px] py-2 px-4">
-                <a href="/about" >About</a>
-            </button>
-        </div>
+		<MobileNav/>
 	</body>
 </html>

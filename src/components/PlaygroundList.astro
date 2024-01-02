@@ -4,7 +4,11 @@ import playground from "../data/playground.json";
 
 ---
 
-<section class="ProjectList py-4">
+<section class="Playground py-4">
+    <div class="py-8">
+        <h1 class="text-3xl font-bold py-2 uppercase">Playground</h1>
+        <p class="text-sm text-pretty">A collection of my half-finished projects, random ideas, experiments that are fun, & sometimes just a little bit weird.</p>
+    </div>
     <div class="flex flex-col gap-2">
         {playground.map((project) => <PgCard project={project} />)}
     </div>
