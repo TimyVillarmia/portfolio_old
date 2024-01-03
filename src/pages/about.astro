@@ -2,20 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Carousel from '../components/Carousel.jsx';
 import Profile from '../data/profile.json';
+import { Icon } from 'astro-icon/components';
+import CTA from '../components/CTA.astro';
+
 ---
 
 
 <Layout title="About container mx-auto">
-    <div>
+    <section>
         <div class="text-center">
             <h1 class="text-4xl font-bold py-4 text-balance">Hey, I&rsquo;m Timy. Nice to meet you.</h1>
         </div>
         <div class="container py-20">
             <Carousel client:load/>
         </div>
-    </div>
-    <div class="container text-base space-y-10">
-        <div>
+    </section>
+    <section class="container text-base space-y-16">
+        <section class="about-me">
             <h1 class="text-3xl font-bold">About me</h1>
             <p class="font-normal whitespace-pre-line text-justify">
                 I was born and raised in Cebu, PH., the first in my family to attend college, raised by my hardworking single mother who worked as a maid. I got hooked on computers early on and loved playing video games and turned me into a "techie-kid" of the family early on.
@@ -28,24 +31,45 @@ import Profile from '../data/profile.json';
                 
                 I&rsquo;m open to internships, and part-time positions in the Full-Stack Development field.
             </p>
-        </div>
-        <div>
+        </section>
+        <section class="stats">
             <h1 class="text-3xl font-bold">Stats</h1>
             <p class="font-bold py-4">Here are some technologies I have been working with:</p>
-            <ul class="Technology-list">
+            <ul class="Technology-list columns-2">
                 {Profile[0].Tools.map((tool) => <li>✦ {tool}</li>)}
             </ul>
-        </div>
-        <div>
+        </section>
+        <section class="experience">
             <h1 class="text-3xl font-bold">Experience</h1>
-            {
-                Profile[0].Experience.length == 0 ? 
-                <div>No</div> :
-                <ul>{Profile[0].Experience.map((exp) => <li>{exp.T}</li>)}
-            </ul>
-            }
-        </div>
-    </div>
+            <div class="py-4">
+                {Profile[0].Experience.map(
+                    (exp) =>                    
+                    <div class="text-base py-2">
+                        <p class="font-bold">{exp.Company}</p>
+                        <p>{exp.Position}</p>
+                        <p>{exp.Date}</p>
+                    </div>
+ 
+                )}
+            </div>
+        </section>
+        <section class="certificates">
+            <h1 class="text-3xl font-bold">Certificates</h1>
+            <div class="py-4">
+                {Profile[0].Certificates.map(
+                    (cert) =>                    
+                    <div class="flex justify-between items-center text-base py-2 border-t-[1px]">
+                        <div>
+                            <p class="font-bold">{cert.Name}</p>
+                            <p>{cert.Issuedby}</p>
+                        </div>
+                        <a href={cert.CredentialURL}><Icon name="mdi:arrow-top-right" class="text-xl"/></a>
+                    </div>
+                )}
+            </div>
+        </section>
+    </section>
+    <CTA/>
 
 
 </Layout>

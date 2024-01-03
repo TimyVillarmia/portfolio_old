@@ -23,11 +23,43 @@
 
         "Experience": [
             {
-                "Company": "Company Name",
+                "Company": "InterNative Labs, LLC",
                 "Position": "Lead Software Engineer",
-                "Date": "Month 2019 – Current"
+                "Date": "Month 2022 - Current"
+            },
+            {
+                "Company": "InterNative Labs, LLC",
+                "Position": "Lead Software Engineer",
+                "Date": "Month 2022 - Current"
+            },
+            {
+                "Company": "InterNative Labs, LLC",
+                "Position": "Lead Software Engineer",
+                "Date": "Month 2022 - Current"
             }
+        ],
 
+        "Certificates": [
+            {
+                "Name": "React Basics",
+                "Issuedby": "Coursera",
+                "CredentialURL": "https://www.coursera.org/account/accomplishments/certificate/DS9UTHL8MS3U"   
+            },
+            {
+                "Name": "Programming with JavaScript",
+                "Issuedby": "Coursera",
+                "CredentialURL": "https://www.coursera.org/account/accomplishments/certificate/TXJKCMGMY3WZ"   
+            },
+            {
+                "Name": "Version Control",
+                "Issuedby": "Coursera",
+                "CredentialURL": "https://www.coursera.org/account/accomplishments/certificate/5CWME62HNDKL"   
+            },
+            {
+                "Name": "Introduction to Front-End Development",
+                "Issuedby": "Coursera",
+                "CredentialURL": "https://www.coursera.org/account/accomplishments/verify/PK5BMHWEA7EG"   
+            }
         ]
     }
 ]

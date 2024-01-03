@@ -35,7 +35,7 @@ export default function Carousel() {
 
 
     const [index , setIndex] = useState(0);
-    const [current, setCurrent] = useState(Array(images.length).fill(false))
+    // const [current, setCurrent] = useState(Array(images.length).fill(false))
     
     const handlePrevious = () => {
         const newIndex = index - 1;
