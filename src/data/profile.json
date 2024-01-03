@@ -1,5 +1,4 @@
 [
-
     {
         "skills": [
             "Front-end Development",
@@ -20,6 +19,15 @@
             "Figma", 
             "Figma", 
             "Adobe Photoshop"
+        ],
+
+        "Experience": [
+            {
+                "Company": "Company Name",
+                "Position": "Lead Software Engineer",
+                "Date": "Month 2019 – Current"
+            }
+
         ]
     }
 ]
