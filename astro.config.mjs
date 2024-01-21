@@ -10,5 +10,8 @@ export default defineConfig({
     include: {
       mdi: ["*"] // (Default) Loads entire Material Design Icon set
     }
-  }), react()]
+  }),
+  react({
+    experimentalReactChildren: true,
+  })]
 });

@@ -4,12 +4,14 @@ import playground from "../data/playground.json";
 
 ---
 
-<section class="Playground py-4">
-    <div class="py-8">
-        <h1 class="text-3xl font-bold py-2 uppercase">Playground</h1>
-        <p class="text-sm text-pretty">A collection of my half-finished projects, random ideas, experiments that are fun, & sometimes just a little bit weird.</p>
+<section class="Playground pb-20">
+    <div class="py-10 xs:flex xs:justify-between md:py-20">
+        <h1 class="text-3xl mb-2 font-bold py-2 uppercase sm:text-4xl md:text-5xl lg:text-7xl">Playground</h1>
+        <p class="text-sm text-balance text-right sm:text-xl lg:text-2xl lg:whitespace-pre-line">A collection of my half-finished projects, random ideas, 
+            experiments that are fun, & sometimes just a little bit weird.
+        </p>
     </div>
-    <div class="flex flex-col gap-2">
+    <div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
         {playground.map((project) => <PgCard project={project} />)}
     </div>
 </section>

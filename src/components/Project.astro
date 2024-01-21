@@ -5,7 +5,7 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <div>
-    <div class="bg-primary rounded-[18px] py-8 px-2">
+    <div class="bg-primary rounded-[18px] py-8 px-2 sm:py-16 sm:px-4">
         <Image 
         src={project.data.image} 
         alt={project.data.title}
@@ -14,18 +14,18 @@ import { Icon } from 'astro-icon/components';
         decoding="async"
         />
     </div>
-    <div class="py-4">
-        <div class="pb-2">
-            <h1 class="text-2xl font-bold pb-4">{project.data.title}</h1>
+    <div class="py-8 sm:flex sm:flex-row">
+        <div class="pb-4 sm:basis-1/2">
+            <h1 class="text-2xl font-bold mb-4 sm:text-3xl sm:pb-4 lg:text-6xl">{project.data.title}</h1>
             {project.data.tags.map((tag) => (
-                <span class="text-xs font-light mr-2 px-3 py-1.5 rounded-full border-[.5px] border-white">{tag}</span>
+                <span class="text-xs font-light mr-2 px-4 py-2 rounded-full border-[.5px] border-white sm:text-sm lg:text-base">{tag}</span>
             ))}
         </div>
-        <div class="">
-            <p class="text-sm py-2">{project.data.description}</p>
-            <div class="flex text-xs text-primary py-2">
+        <div class="sm:basis-1/2">
+            <p class="text-sm pb-2 sm:text-lg sm:pb-4 lg:text-xl">{project.data.description}</p>
+            <div class="flex text-xs text-primary py-2 sm:text-sm lg:text-base">
                 <button class="flex items-center mr-2 gap-x-1 px-4 py-2 rounded-full border-[.5px] border-primary">
-                    <Icon name="mdi:plus-circle-outline" class="text-xl"/>
+                    <Icon name="mdi:plus-circle-outline" class="text-base"/>
                     <a href={project.data.project_note}>
                         Read project notes
                     </a>
@@ -33,9 +33,9 @@ import { Icon } from 'astro-icon/components';
                 
                 <!-- conditional rendering -->
                 {project.data.visit_link && 
-                <button>
-                    <Icon name="mdi:arrow-top-left-thin" class="text-xl"/>
-                    <a href={project.data.visit_link}>Visit website</a>
+                <button class="flex items-center mr-2 gap-x-1 px-4 py-2 rounded-full border-[.5px] border-primary">
+                    <Icon name="mdi:arrow-top-left-thin" class="text-xs"/>
+                    <a href={project.data.visit_link}>Demo</a>
                 </button>}
 
             </div>

@@ -1,20 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Carousel from '../components/Carousel.jsx';
-import Profile from '../data/profile.json';
+import { Tools, Experience, Certificates, Images } from '../data/profile.json';
 import { Icon } from 'astro-icon/components';
 import CTA from '../components/CTA.astro';
 
 ---
 
 
-<Layout title="About container mx-auto">
+<Layout title="About">
     <section>
         <div class="text-center">
-            <h1 class="text-4xl font-bold py-4 text-balance">Hey, I&rsquo;m Timy. Nice to meet you.</h1>
+            <h1 class="text-4xl font-bold py-8 text-balance">Hey, I&rsquo;m Timy. Nice to meet you.</h1>
         </div>
-        <div class="container py-20">
-            <Carousel client:load/>
+        <div class="container py-8">
+            <Carousel slides={Images} client:visible/>
         </div>
     </section>
     <section class="container text-base space-y-16">
@@ -25,7 +25,7 @@ import CTA from '../components/CTA.astro';
                 
                 In my teenage years, curiosity led me to self-taught photo and video editing, taking on design projects for friends and schools. 
                 
-                Today, I&rsquo;m currently a 3rd-year computer science student at Asian College of Technology. While I primarily focus on the Full-Stack Development, I have a great interest in Artificial Intelligence and Game-Development. I proudly serve as a graphics designer for the non-profit organization "Ngiti”.
+                Today, I&rsquo;m currently a 3rd-year computer science student at Asian College of Technology. While I primarily focus on the Full-Stack Development, I have a great interest in Artificial Intelligence and Game-Development. I proudly serve as a graphics designer for the non-profit organization <a href="https://www.facebook.com/NgitiCharity" target="_blank"><span class="text-primary">"Ngiti”</span></a>.
                 
                 When I'm not coding and designing, you'll often find me casually playing TFT and League of Legends or consuming tech contents on YouTube
                 
@@ -36,27 +36,27 @@ import CTA from '../components/CTA.astro';
             <h1 class="text-3xl font-bold">Stats</h1>
             <p class="font-bold py-4">Here are some technologies I have been working with:</p>
             <ul class="Technology-list columns-2">
-                {Profile[0].Tools.map((tool) => <li>✦ {tool}</li>)}
+                {Tools.map((tool) => <li>✦ {tool}</li>)}
             </ul>
         </section>
         <section class="experience">
             <h1 class="text-3xl font-bold">Experience</h1>
             <div class="py-4">
-                {Profile[0].Experience.map(
+                {Experience.map(
                     (exp) =>                    
                     <div class="text-base py-2">
                         <p class="font-bold">{exp.Company}</p>
                         <p>{exp.Position}</p>
                         <p>{exp.Date}</p>
                     </div>
- 
+
                 )}
             </div>
         </section>
         <section class="certificates">
             <h1 class="text-3xl font-bold">Certificates</h1>
             <div class="py-4">
-                {Profile[0].Certificates.map(
+                {Certificates.map(
                     (cert) =>                    
                     <div class="flex justify-between items-center text-base py-2 border-t-[1px]">
                         <div>

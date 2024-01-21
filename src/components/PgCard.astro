@@ -6,12 +6,12 @@ import { Icon } from 'astro-icon/components';
 
 <div class="flex flex-row items-center justify-between bg-card py-6 px-4 rounded-[9px]">
     <div class="">
-        <h1 class="text-base font-bold">{project.title}</h1>
-        <p class="text-sm font-thin">{project.category}</p>
+        <p class="text-base font-bold sm:text-xl">{project.title}</p>
+        <p class="text-base font-light text-[#6b7280] sm:text-xl">{project.category}</p>
     </div>
     <div class="">
         <a href={project.link} target="_blank">
-            <Icon name="mdi:github" class="text-2xl"/>
+            <Icon name="mdi:github" class="text-2xl sm:text-5xl"/>
         </a>
     </div>
 

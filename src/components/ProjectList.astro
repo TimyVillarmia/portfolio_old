@@ -5,10 +5,12 @@ import Project from "../components/Project.astro";
 const projects = await getCollection("projects");
 ---
 
-<section class="Projects py-10">
-    <div class="py-8">
-        <h1 class="text-3xl py-2 font-bold uppercase">Projects</h1>
-        <p class="text-sm text-pretty">A collection of some of my favorite projects from the past few years.</p>
+<section class="Projects pb-20">
+    <div class="py-10 xs:flex xs:justify-between md:py-20">
+        <h1 class="text-3xl mb-2 font-bold uppercase sm:text-4xl md:text-5xl lg:text-7xl">Projects</h1>
+        <p class="text-base text-balance text-right sm:text-xl lg:text-2xl lg:whitespace-pre-line">A collection of some of my favorite 
+            projects from the past few years.
+        </p>
     </div>
     <div class="">
         {projects.map((project) => <Project project={project} />)}

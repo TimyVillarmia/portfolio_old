@@ -3,17 +3,17 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <nav>
-    <div class="mx-auto my-12 flex flex-wrap items-center justify-between">
-        <a href="/" class="text-lg font-bold ">Timy Villarmia</a>
-        <div class="hidden md:flex md:items-center md:justify-between">
-            <button class="border-[1px] rounded-[18px] py-2 px-4 ">
+    <div class="text-sm mt-10 flex flex-wrap items-center justify-between xs:text-base lg:text-xl">
+        <a href="/" class="text-lg font-bold sm:text-2xl lg:text-3xl">Timy Villarmia</a>
+        <div class="hidden sm:flex sm:space-x-4 sm:items-center sm:justify-between">
+            <button class="border-[1px] rounded-full py-2 px-4">
                 <a href="/">Home</a>
             </button>
-            <button class="border-[1px] rounded-[18px] py-2 px-4">
+            <button class="border-[1px] rounded-full py-2 px-4">
                 <a href="/about" >About</a>
             </button>
         </div>
-        <button class="flex items-center bg-primary text-black rounded-full py-2 px-4 text-xs">
+        <button class="flex items-center bg-primary text-black rounded-full py-2 px-4">
             <p>Contact me</p>
             <Icon name="mdi:chevron-right"/>
         </button>

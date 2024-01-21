@@ -1,74 +1,61 @@
-import { useState } from 'react'
-import Icon from '@mdi/react';
-import { mdiAccount } from '@mdi/js';
- 
 
-export default function Carousel() {
+import { useState } from 'react';
+import ChevronLeft from 'mdi-react/ChevronLeftIcon';
+import ChevronRight from 'mdi-react/ChevronRightIcon';
 
-    const images = [
-        {
-            src: "/images/1.jpg",
-            alt: "Profile"
-        },
-        {
-            src: "/images/2.jpg",
-            alt: "Profile"
-        },
-        {
-            src: "/images/3.jpg",
-            alt: "Profile"
-        },
-        {
-            src: "/images/4.jpg",
-            alt: "Profile"
-        },
-        {
-            src: "/images/5.jpg",
-            alt: "Profile"
-        },
-        {
-            src: "/images/6.jpg",
-            alt: "Profile"
-        },
-    ]
+
+
+export default function Carousel({ slides }) {
+
+    const defaultDot = {
+        width: "5px",
+        height: "5px",
+        borderRadius: "50%",
+        backgroundColor: "white",
+    }
+
+    const activeDot = {
+        width: "5px",
+        height: "5px",
+        borderRadius: "50%",
+        backgroundColor: "#7BD3EA",
+    }
 
 
 
     const [index , setIndex] = useState(0);
-    // const [current, setCurrent] = useState(Array(images.length).fill(false))
     
     const handlePrevious = () => {
         const newIndex = index - 1;
-       setIndex(newIndex < 0 ? images.length - 1 : newIndex);
+        setIndex(newIndex < 0 ? slides.length - 1 : newIndex);
     };
-      
+
+
     const handleNext = () => {
         const newIndex = index + 1;
-        setIndex(newIndex >= images.length ? 0 : newIndex);
+        setIndex(newIndex >= slides.length ? 0 : newIndex);
     };
 
-
-
-
-
-
-
-
     return (
-        <>
-        <div className="">
-            <img src={images[index].src} alt="" className="object-cover w-full h-64 rounded-[18px]"/>
+        <div className=''>
+            <div className="relative text-2xl">
+                <div className=''>
+                    <img src={slides[index].src} alt="" className='object-cover w-full h-64 rounded-[18px] bg-gradient-to-r from-black' />
+                </div>
+                <div className='flex justify-between absolute inset-0'>
+                    <button  onClick={() => handlePrevious()}>
+                        <ChevronLeft size={32}/>
+                    </button>
+                    <button onClick={() => handleNext()}>
+                        <ChevronRight size={32}/>
+                    </button>
+                </div>
+            </div>
+
+            <div className='flex space-x-2 py-2 items-center justify-center'>
+                {slides.map((_,slideIndex) => <button key={slideIndex} style={index == slideIndex ? activeDot : defaultDot}></button>)}
+            </div>
         </div>
-        {/* <button onClick={() => handlePrevious()}>
-            <h1>Previous</h1>
-        </button>
-        <button onClick={() => handleNext()}>
-            <h1>Next</h1>
-        </button> */}
-        <div className='flex space-x-2 py-4 items-center justify-center'>
-            {images.map(() => <span className='w-[10px] h-[10px] rounded-[50%] bg-white inline-block'></span>)}
-        </div>
-        </>
     );
 
 }

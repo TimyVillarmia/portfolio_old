@@ -1,65 +1,85 @@
-[
-    {
-        "skills": [
-            "Front-end Development",
-            "User Interface Design",
-             "Desktop Application Development"
-            ],
+{
 
-        "Tools": [
-            "React",
-            "Javascript",
-            "TailwindCSS",
-            "AstroJS",
-            ".Net",
-            "SQL Server", 
-            "Python", 
-            "Git", 
-            "Bash", 
-            "Figma", 
-            "Figma", 
-            "Adobe Photoshop"
-        ],
+    "Tools": [
+        "React",
+        "Javascript",
+        "TailwindCSS",
+        "AstroJS",
+        ".Net",
+        "SQL Server", 
+        "Python", 
+        "Git", 
+        "Bash", 
+        "Figma", 
+        "Figma", 
+        "Adobe Photoshop"
+    ],
 
-        "Experience": [
-            {
-                "Company": "InterNative Labs, LLC",
-                "Position": "Lead Software Engineer",
-                "Date": "Month 2022 - Current"
-            },
-            {
-                "Company": "InterNative Labs, LLC",
-                "Position": "Lead Software Engineer",
-                "Date": "Month 2022 - Current"
-            },
-            {
-                "Company": "InterNative Labs, LLC",
-                "Position": "Lead Software Engineer",
-                "Date": "Month 2022 - Current"
-            }
-        ],
+    "Experience": [
+        {
+            "Company": "InterNative Labs, LLC",
+            "Position": "Lead Software Engineer",
+            "Date": "Month 2022 - Current"
+        },
+        {
+            "Company": "InterNative Labs, LLC",
+            "Position": "Lead Software Engineer",
+            "Date": "Month 2022 - Current"
+        },
+        {
+            "Company": "InterNative Labs, LLC",
+            "Position": "Lead Software Engineer",
+            "Date": "Month 2022 - Current"
+        }
+    ],
 
-        "Certificates": [
-            {
-                "Name": "React Basics",
-                "Issuedby": "Coursera",
-                "CredentialURL": "https://www.coursera.org/account/accomplishments/certificate/DS9UTHL8MS3U"   
-            },
-            {
-                "Name": "Programming with JavaScript",
-                "Issuedby": "Coursera",
-                "CredentialURL": "https://www.coursera.org/account/accomplishments/certificate/TXJKCMGMY3WZ"   
-            },
-            {
-                "Name": "Version Control",
-                "Issuedby": "Coursera",
-                "CredentialURL": "https://www.coursera.org/account/accomplishments/certificate/5CWME62HNDKL"   
-            },
-            {
-                "Name": "Introduction to Front-End Development",
-                "Issuedby": "Coursera",
-                "CredentialURL": "https://www.coursera.org/account/accomplishments/verify/PK5BMHWEA7EG"   
-            }
-        ]
-    }
-]
+    "Certificates": [
+        {
+            "Name": "React Basics",
+            "Issuedby": "Coursera",
+            "CredentialURL": "https://www.coursera.org/account/accomplishments/certificate/DS9UTHL8MS3U"   
+        },
+        {
+            "Name": "Programming with JavaScript",
+            "Issuedby": "Coursera",
+            "CredentialURL": "https://www.coursera.org/account/accomplishments/certificate/TXJKCMGMY3WZ"   
+        },
+        {
+            "Name": "Version Control",
+            "Issuedby": "Coursera",
+            "CredentialURL": "https://www.coursera.org/account/accomplishments/certificate/5CWME62HNDKL"   
+        },
+        {
+            "Name": "Introduction to Front-End Development",
+            "Issuedby": "Coursera",
+            "CredentialURL": "https://www.coursera.org/account/accomplishments/verify/PK5BMHWEA7EG"   
+        }
+    ],
+
+    "Images": [
+        {
+            "src": "/images/1.jpg",
+            "alt": "Profile"
+        },
+        {
+            "src": "/images/2.jpg",
+            "alt": "Profile"
+        },
+        {
+            "src": "/images/3.jpg",
+            "alt": "Profile"
+        },
+        {
+            "src": "/images/4.jpg",
+            "alt": "Profile"
+        },
+        {
+            "src": "/images/5.jpg",
+            "alt": "Profile"
+        },
+        {
+            "src": "/images/6.jpg",
+            "alt": "Profile"
+        }
+    ]
+}
