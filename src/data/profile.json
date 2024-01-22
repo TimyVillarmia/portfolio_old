@@ -58,27 +58,27 @@
 
     "Images": [
         {
-            "src": "/images/1.jpg",
+            "src": "/images/1.webp",
             "alt": "Profile"
         },
         {
-            "src": "/images/2.jpg",
+            "src": "/images/2.webp",
             "alt": "Profile"
         },
         {
-            "src": "/images/3.jpg",
+            "src": "/images/3.webp",
             "alt": "Profile"
         },
         {
-            "src": "/images/4.jpg",
+            "src": "/images/4.webp",
             "alt": "Profile"
         },
         {
-            "src": "/images/5.jpg",
+            "src": "/images/5.webp",
             "alt": "Profile"
         },
         {
-            "src": "/images/6.jpg",
+            "src": "/images/6.webp",
             "alt": "Profile"
         }
     ]
