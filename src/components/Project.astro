@@ -4,7 +4,7 @@ import {Image} from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 ---
 
-<div>
+<div class="lg:mb-20">
     <div class="bg-primary rounded-[18px] py-8 px-2 sm:py-16 sm:px-4">
         <Image 
         src={project.data.image} 
@@ -14,15 +14,19 @@ import { Icon } from 'astro-icon/components';
         decoding="async"
         />
     </div>
-    <div class="py-8 sm:flex sm:flex-row">
+    <div class="py-4 sm:py-8 sm:flex sm:flex-row">
+
         <div class="pb-4 sm:basis-1/2">
-            <h1 class="text-2xl font-bold mb-4 sm:text-3xl sm:pb-4 lg:text-6xl">{project.data.title}</h1>
-            {project.data.tags.map((tag) => (
-                <span class="text-xs font-light mr-2 px-4 py-2 rounded-full border-[.5px] border-white sm:text-sm lg:text-base">{tag}</span>
-            ))}
+            <h1 class="text-2xl font-bold mb-2 sm:text-3xl sm:pb-4 lg:text-6xl">{project.data.title}</h1>
+            <div class="flex flex-wrap gap-y-2">
+                {project.data.tags.map((tag) => (
+                    <span class=" text-xs font-light mr-2 px-4 py-2 rounded-full border-[.5px] border-white sm:text-sm lg:text-base">{tag}</span>
+                ))}
+            </div>
         </div>
+
         <div class="sm:basis-1/2">
-            <p class="text-sm pb-2 sm:text-lg sm:pb-4 lg:text-xl">{project.data.description}</p>
+            <p class="text-sm pb-2 text-balance sm:text-lg sm:pb-4 lg:text-xl">{project.data.description}</p>
             <div class="flex text-xs text-primary py-2 sm:text-sm lg:text-base">
                 <button class="flex items-center mr-2 gap-x-1 px-4 py-2 rounded-full border-[.5px] border-primary">
                     <Icon name="mdi:plus-circle-outline" class="text-base"/>

@@ -1,22 +1,36 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import Indicator from '../../public/images/indicator.webp';
 
 ---
 
-<section class="Hero py-20 items-center text-base text-balance h-dvh sm:text-xl sm:py-40 lg:text-2xl lg:py-50">
-    <div class="text-center">
-        <h1 class="text-5xl font-bold py-4 sm:text-7xl lg:text-9xl">Hi, I&rsquo;m Timy.</h1>
-        <p class="">I&rsquo;m a computer science student specializing in Full-Stack development with a keen interest in Artificial Intelligence and Game Development.</p>    
-    </div>
-    <div class="flex py-20 items-center justify-evenly">
-        <div class="flex items-center justify-center gap-x-2">
-            <Icon name="mdi:location"/>
-            <p>Cebu City, PH</p>
+<section class="Hero py-20 items-center text-base text-balance sm:text-xl sm:py-40 lg:text-2xl lg:py-40">
+    <div>
+        <div class="text-center">
+            <h1 class="text-5xl font-bold py-4 sm:text-7xl lg:text-9xl">Hi, I&rsquo;m Timy.</h1>
+            <p class="">I&rsquo;m a computer science student specializing in Full-Stack development with a keen interest in Artificial Intelligence and Game Development.</p>    
         </div>
-        <div class="flex items-center justify-center gap-x-2">
-            <Icon name="mdi:check-circle-outline" class="text-[#34d399]"/>
-            <p>Available for Internship</p>
+        <div class="flex py-10 sm:py-20 items-center justify-evenly">
+            <div class="flex items-center justify-center gap-x-2">
+                <Icon name="mdi:location"/>
+                <p>Cebu City, PH</p>
+            </div>
+            <div class="flex items-center justify-center gap-x-2">
+                <Icon name="mdi:check-circle-outline" class="text-[#34d399]"/>
+                <p>Available for Internship</p>
+            </div>
+        </div>
+        <div class="flex justify-center py-4">
+            <Image 
+            src={Indicator}
+            alt="scroll down"
+            class={"h-auto w-28 sm:w-48 lg:w-64"}
+            loading="lazy"
+            decoding="async"
+            />
         </div>
     </div>
+
 </section>
 
